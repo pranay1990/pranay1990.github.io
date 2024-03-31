@@ -15,10 +15,10 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-\begin{align}
+```math
     g &= \int_a^b f(x)dx \label{eq1}\tag{1} \\
     a &= b + c \label{eq2}\tag{2}
-\end{align}
+```
 
 See (\ref{eq1}) and (\ref{eq2}).
 

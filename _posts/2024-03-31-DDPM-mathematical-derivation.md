@@ -15,6 +15,13 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+\begin{align}
+    g &= \int_a^b f(x)dx \label{eq1}\tag{1} \\
+    a &= b + c \label{eq2}\tag{2}
+\end{align}
+
+See (\ref{eq1}) and (\ref{eq2})
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home

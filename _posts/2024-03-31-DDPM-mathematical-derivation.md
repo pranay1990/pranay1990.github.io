@@ -1,19 +1,7 @@
 ---
 layout: post
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+"Denoising Diffusion Probabilistic Models (DDPM)" presents a novel approach to generative modeling in the field of machine learning. Authored by Jonathan Ho et al., the paper introduces a framework that leverages diffusion processes to model complex data distributions. By iteratively denoising a sequence of noisy samples, DDPMs effectively learn the underlying data distribution, enabling high-quality generation of realistic images and other types of data. This innovative method has garnered attention for its ability to generate diverse and high-fidelity samples, making it a promising tool for various applications in image synthesis, data augmentation, and beyond. The diffusion model draws inspiration from non-equilibrium thermodynamics. Essentially, it borrows from non-equilibrium statistical physics. The main idea is to gradually break down the structure in a data distribution through a step-by-step forward diffusion process. Then, we develop a reverse diffusion process to bring back the structure in the data. In the DDPM paper, they define this process differently: during forward diffusion, an image is transformed into noise, and during reverse diffusion, this noise is turned back into the original image. In this process, an image is denoted as $$x_0$$, and this initial image is sampled from the data distribution, represented as $$q(x_0)$$. The graphical illustration of forward and reverse diffusion process of the DDPM paper is shown in Fig.(1).
 
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\tag{1}$$
 

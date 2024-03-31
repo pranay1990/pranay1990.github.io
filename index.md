@@ -7,4 +7,5 @@
 #
 layout: home
 ---
-## Hi I am Pranay
+## Diffusion model
+In this blog post, we will primarily discuss famous diffusion model papers for example the DDPM paper, CM paper, and finally the CTM paper.

@@ -15,11 +15,12 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-$$
+<sub><sup>$$
 \begin{equation}
-E = mc^2 \tag{1}
+E = mc^2\sin(\theta) \tag{1}
 \end{equation}
-$$
+$$</sub></sup>
+
 
 Equation is the famous mass-energy equivalence equation.
 

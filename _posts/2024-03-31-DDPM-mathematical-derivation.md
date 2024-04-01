@@ -5,6 +5,7 @@ layout: post
 
 ![Alt text](/assets/images/ddpm.png "Figure 1: Reverse and forward diffusion process")
 
-The joint probability distibution of $$x_1, x_2, \ldots, x_T$$ conditioned on $$x_0$$ is denoted as $$q(x_1,x_2,\ldots,x_T|x_0)$$. Based on Markov property we can write $$q(x_1,x_2,\ldots,x_T|x_0)$$ as follows,
+The joint probability distibution of $$x_1, x_2, \ldots, x_T$$ conditioned on $$x_0$$ is denoted as 
+$$q(x_1,x_2,\ldots,x_T|x_0)$$. Based on Markov property we can write $$q(x_1,x_2,\ldots,x_T|x_0)$$ as follows,
 
 $$q(x_1,x_2,\ldots,x_T|x_0) = \Pi_{t=1}^T q(x_t|x_{t-1})$$

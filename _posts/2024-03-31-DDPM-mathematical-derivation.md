@@ -8,4 +8,8 @@ layout: post
 The joint probability distibution of $$x_1, x_2, \ldots, x_T$$ conditioned on $$x_0$$ is denoted as 
 $$q(x_1,x_2,\ldots,x_T|x_0)$$. Based on Markov property we can write $$q(x_1,x_2,\ldots,x_T|x_0)$$ as follows,
 
-$$q(x_1,x_2,\ldots,x_T|x_0) = \Pi_{t=1}^T q(x_t|x_{t-1})$$
+$$q(x_1,x_2,\ldots,x_T|x_0) = \Pi_{t=1}^T q(x_t|x_{t-1}) \tag{1}$$
+
+where $$q(x_t|x_{t-1})$$ is the transition kernel. In the DDPM paper the authors crafted the transition kernel as Gaussian perturbationn, and the mathematical expression is written as,
+
+$$q(x_t|x_{t-1}) = {\cal N}\left(x_t; \sqrt{1-\beta_t}x_{t_-1}, \beta_t \mathbb{I} \right) \tag{2}$$

@@ -8,7 +8,7 @@ layout: post
   <figcaption>Figure 1: Reverse and forward diffusion process</figcaption>
 </figure>
 
-![Alt text](./_posts/images/ddpm.png "Figure 1: Reverse and forward diffusion process")
+![Alt text](/assets/images/ddpm.png "Figure 1: Reverse and forward diffusion process")
 
 
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\tag{1}$$

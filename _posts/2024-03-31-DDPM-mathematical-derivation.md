@@ -10,6 +10,19 @@ $$q(x_1,x_2,\ldots,x_T|x_0)$$. Based on Markov property we can write $$q(x_1,x_2
 
 $$q(x_1,x_2,\ldots,x_T|x_0) = \Pi_{t=1}^T q(x_t|x_{t-1}) \tag{1}$$
 
-where $$q(x_t|x_{t-1})$$ is the transition kernel. In the DDPM paper the authors crafted the transition kernel as Gaussian perturbationn, and the mathematical expression is written as,
+where 
+$$q(x_t|x_{t-1})$$ is the transition kernel. In the DDPM paper the authors crafted the transition kernel as Gaussian perturbationn, and the mathematical expression is written as,
 
 $$q(x_t|x_{t-1}) = {\cal N}\left(x_t; \sqrt{1-\beta_t}x_{t_-1}, \beta_t \mathbb{I} \right) \tag{2}$$
+
+where $$\beta \in (0, 1)$$ is a hyperparameter chosen ahead of model training. Performing the operation described in equation (2) multiple times for $$t$$ steps takes a lot of time, especially when you need to compute $$q(x_t|x_0)$$. So, we aim to find a mathematical expression for $$q(x_t|x_0)$$ more efficiently. To do this, we'll employ a technique called the parameterization trick, as demonstrated below.
+
+Consider,
+
+ $$z \sim {\cal N}(\mu, \sigma^2) \tag{3a}$$
+
+based on eqn.(3a) we can directly write the following equation,
+
+$$z = \mu + \sigma \eta \tag{3b}$$
+
+where $$\eta \in {\cal N}(0, 1)$$.

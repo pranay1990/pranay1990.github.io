@@ -70,3 +70,10 @@ $$x_t  = \sqrt{\alpha_t}x_{t-1} + \sqrt{1-\alpha_t}\eta \tag{10}$$
 Based on Eq.(10) and Eq.(9) we can write the following,
 
 $$x_t = \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1-\bar{\alpha}_t} \eta \tag{11}$$
+
+When $$\alpha_T  \approx 0$$ then $$x_T$$is almost a normal distribution. Therefore, we can write,
+
+$$q(x_T) = \int q(x_T|x_0) q(x_0) dx_0 = {\cal N}(x_T; 0, \mathbb{I}) \tag{12}$$
+
+
+

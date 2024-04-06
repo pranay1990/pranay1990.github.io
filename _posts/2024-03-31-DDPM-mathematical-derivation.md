@@ -47,8 +47,9 @@ $$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{\alpha_t(1-\alpha_{t-1})} \
 If two random variable 
 $$z_1$$ and $$z_2$$ such that $$z_1 \sim {\cal N}(\mu_1, \sigma^2_1)$$ and $$z_2 \sim {\cal N}(\mu_2, \sigma^2_2)$$. In that case $$z = z_1 + z_2$$ is random variable having the distribution 
 
-$$z \sim{{\cal N}(\mu_1+\mu_2, \sigma^2_1+\sigma^2_2)}\tag{6}$$
+$$z \sim {\cal N}(\mu_1+\mu_2, \sigma^2_1+\sigma^2_2)\tag{6}$$
 
 Based on the concept defined in Eq.(6) we rewrite Eq.(5b) as follows,
 
 $$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + 0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta_1 + 0 + \sqrt{1-\alpha_t}\eta_2 \tag{7}$$
+

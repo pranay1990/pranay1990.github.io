@@ -37,4 +37,9 @@ where $$\eta_1 \in {\cal N}(0, 1)$$. The eq.(4) can also be rewritten as follows
 
 $$x_t = \sqrt{1-\beta_t} \left( \sqrt{1-\beta_{t-1}} x_{t-2} + \sqrt{\beta_{t-1}\eta_1}\right) + \sqrt{\beta_t}\eta_2$$
 
-$$x_t =  \sqrt{(1-\beta_t)(1-\beta_{t-1})} x_{t-2} + \sqrt{(1-\beta_t)\beta_{t-1}\eta_1} + \sqrt{\beta_t}\eta_2 \tag{5}$$
+$$x_t =  \sqrt{(1-\beta_t)(1-\beta_{t-1})} x_{t-2} + \sqrt{(1-\beta_t)\beta_{t-1}\eta_1} + \sqrt{\beta_t}\eta_2 \tag{5a}$$
+
+We denote 
+$$\alpha_t = 1-\beta_t$$ and $$\bar{\alpha}_t = \Pi_{s=1}^t \alpha_s$$, and in terms $$\alpha_t$$ and $$\bar{\alpha}_t$$ rewrite Eq.(5a) as follows,
+
+$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta_1 + \sqrt{1-\alpha_t}\eta_2 \tag{5b}$$

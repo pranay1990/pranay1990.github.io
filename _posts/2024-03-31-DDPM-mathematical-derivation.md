@@ -30,3 +30,11 @@ $$z = \mu + \sigma \eta \tag{3b}$$
 where $$\eta \in {\cal N}(0, 1)$$. The logic behind writing $$z$$ as in Eq.(3b) is very simple, if you calculate mean and variance of 
 $$z$$ using Eq.(3b) it can be trivially calculated to be equal to 
 $$E(z) = \mu$$ and $$Var(z) = \sigma^2$$. Using the same concept of reparameterization and applying to Eq.(2) we obtain the following,
+
+$$x_t = \sqrt{1-\beta_t}x_t +\sqrt{\beta_t}\eta_1 \tag{4}$$
+
+where $$\eta_1 \in {\cal N}(0, 1)$$. The eq.(4) can also be rewritten as follows,
+
+$$x_t = \sqrt{1-\beta_t} \left( \sqrt{1-\beta_{t-1}} x_{t-2} + \sqrt{\beta_{t-1}\eta_1}\right) + \sqrt{\beta_t}\eta_2$$
+
+$$x_t =  \sqrt{(1-\beta_t)(1-\beta_{t-1})} x_{t-2} + \sqrt{(1-\beta_t)\beta_{t-1}\eta_1} + \sqrt{\beta_t}\eta_2 \tag{5}$$

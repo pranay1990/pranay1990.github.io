@@ -63,3 +63,10 @@ $$z^\prime = 0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta + 0 + \sqrt{1-\alpha_t}\et
 
 $$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{1-\alpha_t\alpha_{t-1}}\eta \tag{9}$$
 
+Similar to Eq.(9), we can rewrite Eq.(4) in terms of $$\alpha$$'s.
+
+$$x_t  = \sqrt{\alpha_t}x_{t-1} + \sqrt{1-\alpha_t}\eta \tag{10}$$
+
+Based on Eq.(10) and Eq.(9) we can write the following,
+
+$$x_t = \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1-\bar{\alpha}_t} \eta \tag{11}$$

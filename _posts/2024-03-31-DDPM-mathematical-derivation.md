@@ -71,9 +71,11 @@ Based on Eq.(10) and Eq.(9) we can write the following,
 
 $$x_t = \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1-\bar{\alpha}_t} \eta \tag{11}$$
 
-When $$\alpha_T  \approx 0$$ then $$x_T$$is almost a normal distribution. Therefore, we can write,
+When $$\bar{\alpha}_T  \approx 0$$ then $$x_T$$is almost a normal distribution. Therefore, we can write,
 
 $$q(x_T) = \int q(x_T|x_0) q(x_0) dx_0 = {\cal N}(x_T; 0, \mathbb{I}) \tag{12}$$
 
+In simple terms, the forward process gradually adds noise to the data until all structures vanish. Equation (12) also highlights a key point: when we repeatedly apply the transition kernel $$q(x_t|x_{t-1})$$, as defined in Equation (2), to a sample $$x_0$$ from any distribution $$q(x_0)$$, we end up with a sample $$x_T$$ from a known distribution $${\cal N}(x_T; 0, \mathbb{I})$$.
 
+However, this alone isn't very helpful. What's more useful is the reverse process, starting from isotropic Gaussian noise and transforming it into $$q(x_0)$$.
 

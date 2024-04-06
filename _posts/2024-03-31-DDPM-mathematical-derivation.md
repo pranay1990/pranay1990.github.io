@@ -18,7 +18,8 @@ $$q(x_t|x_{t-1}) = {\cal N}\left(x_t; \sqrt{1-\beta_t}x_{t_-1}, \beta_t \mathbb{
 where $$\beta \in (0, 1)$$ is a hyperparameter chosen ahead of model training. Performing the operation described in equation (2) multiple times for $$t$$ steps takes a lot of time, especially when you need to compute 
 $$q(x_t|x_0)$$. So, we aim to find a mathematical expression for $$q(x_t|x_0)$$ more efficiently. To do this, we'll employ a technique called the parameterization trick, as demonstrated below.
 
-Consider,
+Considera random variable 
+$$z$$ whic is sampled from a normal distribution as shown below,
 
  $$z \sim {\cal N}(\mu, \sigma^2) \tag{3a}$$
 
@@ -26,4 +27,6 @@ based on eqn.(3a) we can directly write the following equation,
 
 $$z = \mu + \sigma \eta \tag{3b}$$
 
-where $$\eta \in {\cal N}(0, 1)$$.
+where $$\eta \in {\cal N}(0, 1)$$. The logic behind writing $$z$$ as in Eq.(3b) is very simple, if you calculate mean and variance of 
+$$z$$ using Eq.(3b) it can be trivially calculated to be equal to 
+$$E(z) = \mu$$ and $$Var(z) = \sigma^2$$. Using the same concept of reparameterization and applying to Eq.(2) we obtain the following,

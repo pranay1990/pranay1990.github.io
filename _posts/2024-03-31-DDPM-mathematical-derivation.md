@@ -31,18 +31,18 @@ where $$\eta \in {\cal N}(0, 1)$$. The logic behind writing $$z$$ as in Eq.(3b) 
 $$z$$ using Eq.(3b) it can be trivially calculated to be equal to 
 $$E(z) = \mu$$ and $$Var(z) = \sigma^2$$. Using the same concept of reparameterization and applying to Eq.(2) we obtain the following,
 
-$$x_t = \sqrt{1-\beta_t}x_t +\sqrt{\beta_t}\eta_1 \tag{4}$$
+$$x_t = \sqrt{1-\beta_t}x_t +\sqrt{\beta_t}\eta \tag{4}$$
 
-where $$\eta_1 \in {\cal N}(0, 1)$$. The eq.(4) can also be rewritten as follows,
+where $$\eta \in {\cal N}(0, 1)$$. The eq.(4) can also be rewritten as follows,
 
-$$x_t = \sqrt{1-\beta_t} \left( \sqrt{1-\beta_{t-1}} x_{t-2} + \sqrt{\beta_{t-1}}\eta_1\right) + \sqrt{\beta_t}\eta_2$$
+$$x_t = \sqrt{1-\beta_t} \left( \sqrt{1-\beta_{t-1}} x_{t-2} + \sqrt{\beta_{t-1}}\eta\right) + \sqrt{\beta_t}\eta$$
 
-$$x_t =  \sqrt{(1-\beta_t)(1-\beta_{t-1})} x_{t-2} + \sqrt{(1-\beta_t)\beta_{t-1}}\eta_1 + \sqrt{\beta_t}\eta_2 \tag{5a}$$
+$$x_t =  \sqrt{(1-\beta_t)(1-\beta_{t-1})} x_{t-2} + \sqrt{(1-\beta_t)\beta_{t-1}}\eta + \sqrt{\beta_t}\eta \tag{5a}$$
 
 We denote 
 $$\alpha_t = 1-\beta_t$$ and $$\bar{\alpha}_t = \Pi_{s=1}^t \alpha_s$$, and in terms $$\alpha_t$$ and $$\bar{\alpha}_t$$ rewrite Eq.(5a) as follows,
 
-$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta_1 + \sqrt{1-\alpha_t}\eta_2 \tag{5b}$$
+$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta + \sqrt{1-\alpha_t}\eta \tag{5b}$$
 
 If two random variable 
 $$z_1$$ and $$z_2$$ such that $$z_1 \sim {\cal N}(\mu_1, \sigma^2_1)$$ and $$z_2 \sim {\cal N}(\mu_2, \sigma^2_2)$$. In that case $$z = z_1 + z_2$$ is random variable having the distribution 
@@ -51,5 +51,15 @@ $$z \sim {\cal N}(\mu_1+\mu_2, \sigma^2_1+\sigma^2_2)\tag{6}$$
 
 Based on the concept defined in Eq.(6) we rewrite Eq.(5b) as follows,
 
-$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + 0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta_1 + 0 + \sqrt{1-\alpha_t}\eta_2 \tag{7}$$
+$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + 0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta + 0 + \sqrt{1-\alpha_t}\eta \tag{7}$$
+
+where 
+$$0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta \sim {\cal N}(0, \alpha_t(1-\alpha_{t-1}))$$ and $$0 + \sqrt{1-\alpha_t}\eta \sim {\cal N}(0, 1-\alpha_t)$$. Using Eq.(6) one can write the following,
+
+$$z^\prime \sim {\cal N}(0, 1-\alpha_t\alpha_{t-1}) \tag{8}$$
+
+where 
+$$z^\prime = 0 + \sqrt{\alpha_t(1-\alpha_{t-1})} \eta + 0 + \sqrt{1-\alpha_t}\eta$$. Using Eq.(8) in Eq.(7) we obtain the following,
+
+$$x_t = \sqrt{\alpha_t \alpha_{t-1}} x_{t-2} + \sqrt{1-\alpha_t\alpha_{t-1}}\eta \tag{9}$$
 

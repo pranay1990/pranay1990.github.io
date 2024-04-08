@@ -95,4 +95,13 @@ $$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm
 
 $$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( \int q(x_{1:T}\vert x_0)\frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)} dx_{1:T}\right) \tag{15a}$$
 
-$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( \int E_{q(x_{1:T}\vert x_0)} \left[\frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)}\right]\right) \tag{15b}$$
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( E_{q(x_{1:T}\vert x_0)} \left[\frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)}\right]\right) \tag{15b}$$
+
+As we know that $$\log$$ is a concave function, therefore log of expectation any value is always greater than expectation of 
+$$\log$$, and graphically is illustrated in following figure.
+
+![Alt text](/assets/images/log_diagram.png "Figure 2: Log function diagram")
+
+Based on above explaination Eq.(15b) can be rewritten as,
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) \geq \underset{\theta}{\mathrm{max}} E_{q(x_{1:T}\vert x_0)} \left[ \log \frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)}\right] \tag{16}$$

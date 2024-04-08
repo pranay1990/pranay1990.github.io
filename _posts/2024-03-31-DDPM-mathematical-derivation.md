@@ -79,5 +79,9 @@ In simple terms, the forward process gradually adds noise to the data until all 
 $$q(x_t|x_{t-1})$$, as defined in Equation (2), to a sample $$x_0$$ from any distribution $$q(x_0)$$, we end up with a sample $$x_T$$ from a known distribution 
 $${\cal N}(x_T; 0, \mathbb{I})$$.
 
-However, this alone isn't very helpful. What's more useful is the reverse process, starting from isotropic Gaussian noise and transforming it into $$q(x_0)$$.
+However, this alone isn't very helpful. What's more useful is the reverse process, starting from isotropic Gaussian noise and transforming it into $$q(x_0)$$. But determining the distribution 
+$$q^\prime(x_{t-1}\vert x_t)$$ is very challenging. To calculate this, we need to know the probability distribution of all the data, which can be quite complex. It has already been demonstrated in stochastic differential equations (like Brownian motion) by Langevin that the reverse diffusion process 
+$$q^\prime(x_{t-1}\vert x_t)$$ can be approximated as a Gaussian distribution. Hence, we can parameterize the reverse diffusion process as follows,
+
+$$p_\theta(x_{t-1}\vert x_t) = {\cal N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t,t)) \tag{13}$$
 

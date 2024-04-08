@@ -105,3 +105,7 @@ $$\log$$, and graphically is illustrated in following figure.
 Based on above explaination Eq.(15b) can be rewritten as,
 
 $$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) \geq \underset{\theta}{\mathrm{max}} E_{q(x_{1:T}\vert x_0)} \left[ \log \frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)}\right] \tag{16}$$
+
+In Eq.(16), the joint probability distribution can be written in terms of chain of conditional probabilities,
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) \geq \underset{\theta}{\mathrm{max}} E_{q(x_{1:T}\vert x_0)} \left[ \log \frac{p_\theta(x_0|x_{1:T})p_\theta(x_1|x_{2:T})\ldots p_\theta(x_T)}{q(x_{1:T}\vert x_0)}\right] \tag{17}$$

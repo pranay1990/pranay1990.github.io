@@ -87,6 +87,12 @@ $$p_\theta(x_{t-1}\vert x_t) = {\cal N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\the
 
 We aim to understand $$p_\theta (x_{t-1}\vert x_t)$$ in order to generate images that closely resemble our training dataset. For this purpose, we seek to maximize the log-likelihood of the observed data, as depicted below.
 
-$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \log\left( \int p(x_{0:T}) dx_{1:T}\right) \tag{14}$$
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}}\log\left( \int p(x_{0:T}) dx_{1:T}\right) \tag{14}$$
 
 where $$p(x_{0:T})$$ is joint probability density.
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( \int p(x_{0:T})\frac{q(x_{1:T}\vert x_0)}{q(x_{1:T}\vert x_0)} dx_{1:T}\right)$$
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( \int q(x_{1:T}\vert x_0)\frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)} dx_{1:T}\right) \tag{15a}$$
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \underset{\theta}{\mathrm{max}} \log \left( \int E_{q(x_{1:T}\vert x_0)} \left[\frac{p(x_{0:T})}{q(x_{1:T}\vert x_0)}\right]\right) \tag{15b}$$

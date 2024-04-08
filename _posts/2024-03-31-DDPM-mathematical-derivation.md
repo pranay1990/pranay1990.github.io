@@ -80,8 +80,13 @@ $$q(x_t|x_{t-1})$$, as defined in Equation (2), to a sample $$x_0$$ from any dis
 $${\cal N}(x_T; 0, \mathbb{I})$$.
 
 However, this alone isn't very helpful. What's more useful is the reverse process, starting from isotropic Gaussian noise and transforming it into $$q(x_0)$$. But determining the distribution 
-$$q^\prime(x_{t-1}\vert x_t)$$ is very challenging. To calculate this, we need to know the probability distribution of all the data, which can be quite complex. It has already been demonstrated in stochastic differential equations (like Brownian motion) by Langevin that the reverse diffusion process 
-$$q^\prime(x_{t-1}\vert x_t)$$ can be approximated as a Gaussian distribution. Hence, we can parameterize the reverse diffusion process as follows,
+$$p(x_{t-1}\vert x_t)$$ is very challenging. To calculate this, we need to know the probability distribution of all the data, which can be quite complex. It has already been demonstrated in stochastic differential equations (like Brownian motion) by Langevin that the reverse diffusion process 
+$$p(x_{t-1}\vert x_t)$$ can be approximated as a Gaussian distribution. Hence, we can parameterize the reverse diffusion process as follows,
 
 $$p_\theta(x_{t-1}\vert x_t) = {\cal N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t,t)) \tag{13}$$
 
+We aim to understand $$p_\theta (x_{t-1}\vert x_t)$$ in order to generate images that closely resemble our training dataset. For this purpose, we seek to maximize the log-likelihood of the observed data, as depicted below.
+
+$$\underset{\theta}{\mathrm{max}}\log(p_\theta(x_0)) = \log\left( \int p(x_{0:T}) dx_{1:T}\right) \tag{14}$$
+
+where $$p(x_{0:T})$$ is joint probability density.
